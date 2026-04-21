@@ -34,7 +34,7 @@ jobs:
         run: docker compose up -d
 
       - name: Wait for Webserver
-        run: .github\workflows\wait-for-webserver.sh
+        run: bash .github/workflows/wait-for-webserver.sh
 
       - name: Run Playwright Tests
         run: npx playwright test --project=chromium
